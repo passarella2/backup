@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shop Multi-Brand — Layout</title>
+    <link rel="stylesheet" href="/css/style-dmode-manual.css"> 
+</head>
+
+<body>
+    <div class="container">
+        <header class="site-header">
+            <button id="menuToggle" class="menu-btn" aria-label="Abrir Menu">☰</button>
+
+            <div class="logo-row" aria-hidden="true">
+                <img class="brand-logo" src="/img/adidas/adidas.png" alt="Adidas (logo placeholder)">
+                <img class="brand-logo" src="/img/nike/nike.png" alt="Nike (logo placeholder)">
+                <img class="brand-logo" src="/img/Puma-img/puma branco.png" alt="Puma (logo placeholder)">
+            </div>
+
+            <nav class="nav" id="mainNav">
+                <a href="pagina-principal.html" class="nav-link">HOME</a>
+                <a href="#" class="nav-link">SHOP</a>
+                <a href="nike.html" class="nav-link" data-brand="Nike">NIKE</a> 
+                <a href="adidas.html" class="nav-link" data-brand="Adidas">ADIDAS</a>
+                <a href="puma.html" class="nav-link" data-brand="Puma">PUMA</a> 
+                <a href="#" class="nav-link">SOBRE</a>
+                <a href="#" class="nav-link">CONTATO</a>
+            </nav>
+
+            <button id="toggleDark" class="dark-btn">🌙</button>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>SHOP MULTI-BRAND</h1>
+                <p class="lead">Produtos selecionados das principais marcas — tudo em um só lugar.</p>
+            </section>
+
+            <section class="highlight-section" aria-label="Ofertas e Destaques">
+                <h2>⚡ Ofertas Relâmpago</h2>
+                <div class="grid highlight-grid">
+
+                    <article class="card highlight-card" data-brand="Nike" data-category="conjuntos">
+                        <div class="media">
+                            <img src="/img/nike/images (1).jpg" alt="Conjunto de Treino corinthians Nike">
+                        </div>
+                        <div class="card-details">
+                            <h3>Conjunto de Treino corinthians Nike</h3>
+                            <div class="brand-tag">Nike</div>
+                            <p class="old-price">R$ 499,90</p>
+                            <div class="price">R$ 299,90</div>
+                            <div class="actions">
+                                <a href="nike.html" class="btn primary">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card highlight-card" data-brand="Adidas" data-category="camisa">
+                        <div class="media">
+                            <img src="/img/adidas/camisa adidas.jpg.jpg" alt="Camisa Adidas Sporty & Rich">
+                        </div>
+                        <div class="card-details">
+                            <h3>Camisa Clássica Vintage</h3>
+                            <div class="brand-tag">Adidas</div>
+                            <p class="old-price">R$ 189,90</p>
+                            <div class="price">R$ 139,90</div>
+                            <div class="actions">
+                                <a href="adidas.html" class="btn primary">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card highlight-card" data-brand="Puma" data-category="agasalho">
+                        <div class="media">
+                            <img src="/img/Puma-img/puma c5.png" alt="Agasalho Puma Verde/Preto">
+                        </div>
+                        <div class="card-details">
+                            <h3>Agasalho de Treino C5</h3>
+                            <div class="brand-tag">Puma</div>
+                            <p class="old-price">R$ 359,90</p>
+                            <div class="price">R$ 259,90</div>
+                            <div class="actions">
+                                <a href="puma.html" class="btn primary">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="controls" aria-label="Filtros">
+                <div class="filters" role="toolbar">
+                    <button class="chip active" data-brand="all">Todos os Produtos</button>
+
+                    <button class="chip" data-brand="Adidas">Adidas</button>
+                    <button class="chip" data-brand="Nike">Nike</button>
+                    <button class="chip" data-brand="Puma">Puma</button>
+                </div>
+
+                <div class="search-wrap">
+                    <input id="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+                </div>
+            </section>
+
+            <section id="shop" class="grid" aria-live="polite">
+                </section>
+        </main>
+
+        <footer class="site-footer">
+            @web_design — produtos e marcas para fins educacional não permitido a comercialização.
+        </footer>
+
+        </div>
+
+    <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal">
+            <button id="modalClose" class="modal-close" aria-label="Fechar">✕</button>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="">
+                <div class="modal-info">
+                    <h2 id="modalName"></h2>
+                    <div class="brand-tag" id="modalBrand"></div>
+                    <p id="modalDesc"></p>
+                    <div class="modal-buy">
+                        <div class="modal-price" id="modalPrice"></div>
+                        <button id="addToCart" class="btn primary">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <script src="/js/script-dmode-manual.js"></script>
+</body>
+</html>

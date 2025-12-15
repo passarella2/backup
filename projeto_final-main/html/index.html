@@ -1,0 +1,122 @@
+<!doctype html>
+<!-- 
+incluindo o day-night;
+remover fundo da imagens;
+menu drop-down;
+falta o favicon;
+
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop Multi-Brand — Demo</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="logo-row" aria-hidden="true">
+        <img class="brand-logo" src="/img/adidas.png" alt="Adidas (logo placeholder)">
+        <img class="brand-logo" src="/img/nike.png"  alt="Nike (logo placeholder)">
+        <img class="brand-logo" src="/img/puma.png"  alt="Puma (logo placeholder)">
+      </div>
+
+      <nav class="nav">
+        <a href="#" class="nav-link">HOME</a>
+        <a href="#shop" class="nav-link">SHOP</a>
+        <a href="#about" class="nav-link">SOBRE</a>
+      <section class="hero">
+        <h1>SHOP MULTI-BRAND</h1>
+        <p class="lead">Produtos selecionados das principais marcas — tudo em um só lugar.</p>
+      </section>
+
+      <section class="controls" aria-label="Filtros">
+        <div class="filters" role="toolbar">
+
+          <button class="chip active" data-brand="all">Todas</button>
+
+          <!-- ======================= -->
+          <!-- DROPDOWN ADIDAS -->
+          <!-- ======================= -->
+          <div class="dropdown">
+            <button class="chip" data-brand="Adidas">Adidas </button>
+            <div class="dropdown-menu">
+              <button data-brand="Adidas" data-category="chuteira">Chuteira</button>
+              <button data-brand="Adidas" data-category="camisa">Camisa</button>
+              <button data-brand="Adidas" data-category="bone">Boné</button>
+              <button data-brand="Adidas" data-category="conjuntos">Conjuntos</button>
+              <button data-brand="Adidas" data-category="tenis">Tênis</button>
+              <button data-brand="Adidas" data-category="acessorios">Acessórios</button>
+            </div>
+          </div>
+
+          <!-- ======================= -->
+          <!-- DROPDOWN NIKE -->
+          <!-- ======================= -->
+          <div class="dropdown">
+            <button class="chip" data-brand="Nike">Nike </button>
+            <div class="dropdown-menu">
+              <button data-brand="Nike" data-category="chuteira">Chuteira</button>
+              <button data-brand="Nike" data-category="camisa">Camisa</button>
+              <button data-brand="Nike" data-category="bone">Boné</button>
+              <button data-brand="Nike" data-category="conjuntos">Conjuntos</button>
+              <button data-brand="Nike" data-category="tenis">Tênis</button>
+              <button data-brand="Nike" data-category="acessorios">Acessórios</button>
+            </div>
+          </div>
+
+          <!-- ======================= -->
+          <!-- DROPDOWN PUMA -->
+          <!-- ======================= -->
+          <div class="dropdown">
+            <button class="chip" data-brand="Puma">Puma </button>
+            <div class="dropdown-menu">
+              <button data-brand="Puma" data-category="chuteira">Chuteira</button>
+              <button data-brand="Puma" data-category="camisa">Camisa</button>
+              <button data-brand="Puma" data-category="bone">Boné</button>
+              <button data-brand="Puma" data-category="conjuntos">Conjuntos</button>
+              <button data-brand="Puma" data-category="tenis">Tênis</button>
+              <button data-brand="Puma" data-category="acessorios">Acessórios</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="search-wrap">
+          <input id="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+        </div>
+      </section>
+
+      <section id="shop" class="grid" aria-live="polite">
+        <!-- cards injetados via JS -->
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Demo — substitua imagens por ativos oficiais quando licenciados.
+    </footer>
+  </div>
+
+  <!-- Modal de produto -->
+  <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button id="modalClose" class="modal-close" aria-label="Fechar">✕</button>
+      <div class="modal-body">
+        <img id="modalImage" src="" alt="">
+        <div class="modal-info">
+          <h2 id="modalName"></h2>
+          <div class="brand-tag" id="modalBrand"></div>
+          <p id="modalDesc"></p>
+          <div class="modal-buy">
+            <div class="modal-price" id="modalPrice"></div>
+            <button id="addToCart" class="btn primary">Adicionar ao carrinho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
